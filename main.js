@@ -28,15 +28,38 @@
 
 
 
-function removeChar(str, charsToRemove) {
-  let result = '';
+// function removeChar(str, charsToRemove) {
+//   let result = '';
+
+//   for (let char of str) {
+//     if (!charsToRemove.includes(char)) {
+//       result += char
+//     }
+//   }
+//   return result
+// }
+
+// console.log(removeChar("hhhwwwooo", ['h', 'o']))
+
+
+
+
+function removeCharacters(str, charsToRemove) {
+  let result = ''; 
 
   for (let char of str) {
     if (!charsToRemove.includes(char)) {
-      result += char
+      result += char;
     }
   }
-  return result
+
+  return result;
 }
 
-console.log(removeChar("hhhwwwooo", ['h', 'o']))
+let inputString = prompt("Введите строку:");
+
+let chars = prompt("Введите символы для удаления, разделяя их запятой:");
+
+let charsToRemove = chars.split(',');
+
+alert(removeCharacters(inputString, charsToRemove));
