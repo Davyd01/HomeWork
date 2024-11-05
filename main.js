@@ -182,3 +182,25 @@
 
 
 
+function userNum() {
+  for (let i = 0; i <= 10; i++) {
+    let input = prompt("Enter a number over 100")
+
+    if (input === null) {
+      return null
+    }
+
+    let number = Number(input)
+
+    if (number >= 100) {
+      console.log(number)
+      break
+    } else {
+      if (number <= 100) {
+        alert ("That is not over 100")
+      }
+    }
+  }
+    
+}
+userNum()
