@@ -180,11 +180,13 @@
 
 
 
+
+
 function sum() {
-  let array = [2]
+  let array = [2];
 
   return function(number) {
-    array.push(number)
+    array.push(number);
     return array.reduce((total, current) => total + current, 0)
   }
 }
@@ -195,4 +197,8 @@ let final = sum()
 
 console.log(final(5))
 console.log(final(6))
+console.log(final(10))
+console.log(final(12))
+console.log(final(84))
+console.log(final(4863))
 
