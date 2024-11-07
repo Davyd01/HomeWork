@@ -182,3 +182,155 @@
 
 
 
+// function sumEvenNumbers(n) {
+//   let sum = 0;
+//   for (let i = 1; i <= n; i++){
+//     if (i % 2 === 0) {
+//       sum += i
+//     } 
+//   }
+//   return sum
+// }
+
+// console.log(sumEvenNumbers(44))
+
+
+// function findDivisors(n) {
+//   let divisors = []
+
+//   for (let i = 1; i <= n; i++) {
+//     if (n % i === 0) {
+//       divisors.push(i)
+//     }
+//   }
+//   return divisors
+// }
+
+// console.log(findDivisors(44))
+
+
+
+// function countVowels(str) {
+//   let toLowerCase = str.toLowerCase().split("")
+//   let count = 0;
+  
+
+//   for (let i of toLowerCase) {
+//     if ("aeiou".includes(i)) {
+//       count++
+//     }
+//   }
+//   return count
+// }
+
+// console.log(countVowels("awerty"))
+
+
+
+// function reverseString(str) {
+//   let split = str.split("")
+//   let reverse = split.reverse()
+//   let join = reverse.join("")
+//   return join
+// }
+
+// console.log(reverseString("hello"))
+
+
+// function findLargestNumber(arr) {
+//   let largest = arr[0]
+
+//   for (let i of arr) {
+//     if (i > largest) {
+//       largest = i
+//     }
+//   }
+//   return largest
+// }
+
+// console.log(findLargestNumber([2,5,7,8,5,7,8,65,4,8,589,56,5,8,58]))
+
+
+// function removeDuplicates(arr) {
+//   let unique = []
+
+//   for (let i of arr) {
+//     if (!unique.includes(i)) {
+//       unique.push(i)
+//     }
+//   }
+//   return unique
+// }
+
+// console.log(removeDuplicates([2,2,3,3,4,5,6,6]))
+
+
+
+// function capitalizeWords(str) {
+//   let arr = str.split(" ")
+//   let capitalizedWords = arr.map(word => {
+//     return word[0].toUpperCase() + word.slice(1)
+//   }) 
+//   return capitalizedWords.join(" ")
+// }
+
+// console.log(capitalizeWords("hello world"))
+
+
+
+// let skill = {
+//   name: 'html';
+//   level: 4;
+//   fullSkill: function() {
+//     return '${this.name}'-${this.level}
+//   }
+// }
+
+
+
+
+// function Calculator(a, b) {
+//   this.a = a
+//   this.b = v
+// }
+
+
+
+// let user = {
+//   id: 1,
+//   firstName: 'anton',
+//   lastName: 'holovin',
+//   age: '30'
+//   fullName: function() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+// }
+
+// console.log(user.fullName())
+// fullName()
+
+
+
+// var data = [
+//   {name: 'samantha', age: 12},
+//   {name: 'alex', age: 14}
+// ]
+
+// let user = {
+//   data: [
+//     {name: 'woods', age: 37},
+//     {name: 'mickelson', age: 43}
+//   ],
+//   showData() {
+//     console.log(this);
+//     console.log(`${this.data[0].name} - ${this.data[0].age}`)
+//   }
+// }
+
+
+// let showDataVar = user.showData;
+
+// showDataVar()
+
+
+
