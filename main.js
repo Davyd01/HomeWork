@@ -652,6 +652,49 @@
 
 
 
+// function calculateTotalSalary(department) {
+  
+// }
+
+
+
+// let company = {
+//   sales: [{name: 'John', salary: 1000}, {name: 'Alice', salary: 600}],
+//   development: {
+//     web: [{name: 'Peter', salary: 2000}, {name: 'Alex', salary: 1800}],
+//     internals: [{name: 'Jack', salary: 1300}]
+//   }
+// }
+// console.log(this.company.salary)
+
+
+function calculateTotalSalary(department) {
+  let totalSalary = 0; 
+
+  if (Array.isArray(department)) {
+    totalSalary = department.reduce((sum, employee) => sum + employee.salary, 0);
+  } else {
+    for (let subDepartment in department) {
+      totalSalary += calculateTotalSalary(department[subDepartment]); 
+    }
+  }
+
+  return totalSalary; 
+}
+
+let company = {
+  sales: [{name: 'John', salary: 1000}, {name: 'Alice', salary: 600}],
+  development: {
+    web: [{name: 'Peter', salary: 2000}, {name: 'Alex', salary: 1800}],
+    internals: [{name: 'Jack', salary: 1300}],
+    internals1: [{name: 'Jack', salary: 1300}],
+    internals2: [{name: 'Jack', salary: 1300}]
+
+
+  }
+};
+
+console.log(calculateTotalSalary(company)); 
 
 
 
