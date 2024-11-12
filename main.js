@@ -334,3 +334,324 @@
 
 
 
+// let counter = {
+//   value: 0,
+
+//   increment: function() {
+//     this.value++
+//     return this
+//   },
+//   decrement: function() {
+//     this.value--
+//     return this
+//   },
+//   reset: function() {
+//     this.value = 0
+//     return this
+//   },
+//   getValue: function() {
+//     console.log(this.value)
+//     return this
+//   }
+
+// }
+
+
+
+// let book = {
+//   library: [],
+
+//   addBook: function(title) {
+//     this.library.push(title)
+//     return this
+//   },
+//   removeBook: function(title) {
+//     const index = this.library.indexOf(title)
+//     if (index !== -1) {
+//       this.library.splice(index,1)
+//     }
+//     return this
+//   },
+//   listBooks: function() {
+//     console.log(this.library)
+//     return this
+//   },
+//   clearLibrary: function() {
+//     this.library = []
+//     return this
+//   }
+  
+// }
+
+
+
+
+// let counter = {
+//   count: 0,
+
+//   increment: function() {
+//     this.count++
+//     return this
+//   },
+//   decrement: function() {
+//     this.count--
+//     return this
+//   },
+//   showCount: function() {
+//     console.log(this.count)
+//     return this
+//   }
+// }
+
+
+// let user = {
+//   name: "",
+//   setName: function(newName) {
+//     this.name = newName;
+//     return this
+//   },
+//   greet: function() {
+//     console.log(`Hello, ${this.name}`)
+//     return this
+//   }
+// }
+
+// user.setName("dddd").greet(); // "Hello, Alice!"
+// user.setName("Bob").greet(); // "Hello, Bob!"
+
+
+// let calculator = {
+//   setValues: function(a,b) {
+//     this.a = a,
+//     this.b = b;
+//   },
+//   sum: function() {
+//     return this.a + this.b
+//   },
+//   multiply: function() {
+//     return this.a * this.b
+//   }
+// }
+// calculator.setValues(5,10)
+
+// console.log(calculator.sum())
+
+
+
+// let store = {
+//   products: [],
+
+//   addProduct: function(productName) {
+//     this.products.push(productName)
+//     return this
+//   },
+//   removeProduct: function(productName) {
+//     const index = this.products.indexOf(productName)
+//     if (index !== -1) {
+//       this.products.slice(index, 1)
+//     }
+//     return this
+//   },
+
+//   showProducts: function(productName) {
+//     console.log(this.products)
+//     return this
+//   },
+//   clearStore: function(productName) {
+//     this.products = []
+//     return this
+//   }
+
+// }
+
+
+
+// let bankAccount = {
+//   balance: 0,
+
+//   deposit: function(amount) {
+//     this.balance += amount
+//     return this
+//   },
+//   withdraw: function(amount) {
+//     if (this.balance >= amount) {
+//       this.balance -= amount
+//     } else {
+//       console.log("Недостаточно средств")
+//     }
+//     return this
+//   },
+//   showBalance: function(amount) {
+//     console.log(this.balance)
+//     return this
+//   }
+// }
+
+
+// bankAccount.deposit(100).deposit(50).withdraw(30).showBalance(); // Баланс: 120
+// bankAccount.withdraw(200); // Недостаточно средств
+
+
+
+
+// let studyPlan = {
+//   lessons: [],
+  
+
+//   addLesson: function(title, duration) {
+//     this.lessons.push({title, duration})
+//     return this
+//   },
+//   removeLesson: function(title) {
+//     const index = this.lessons.findIndex(lesson => lesson.title === title)
+//     if (index !== -1) {
+//       this.lessons.splice(index, 1)
+//     }
+//     return this
+//   },
+//   getTotalDuration: function() {
+//     return this.lessons.reduce((total, lesson) => total + lesson.duration, 0);
+//   },
+  
+//   listLessons: function() {
+//     this.lessons.forEach(lesson => console.log(`${lesson.title}: ${lesson.duration} hours`));
+//     return this;
+//   }
+  
+// }
+
+// studyPlan.addLesson("JavaScript Basics", 3).addLesson("CSS Flexbox", 2).listLessons();
+// console.log("Total Duration:", studyPlan.getTotalDuration()); // Total Duration: 5
+// studyPlan.removeLesson("CSS Flexbox").listLessons();
+
+
+
+// function foo(n) {
+//   if(n === 0) {
+//     return 1
+//   }
+
+//   return n * foo(n - 1)
+// }
+
+// console.log(foo(5))
+
+
+
+
+
+
+
+
+// function NumberHandler(n = Number(prompt("Enter a non-negative number"))) {
+//   this.n = n >= 0 ? n : 'Error';
+
+//   this.sumToN = function() {
+//     if (this.n === 'Error') {
+//       return 'Error';
+//     }
+//     return recursiveSum(this.n)
+//   }
+
+//   function recursiveSum(num) {
+//     if (num === 0) {
+//       return 0
+//     }
+//     return num + recursiveSum(num - 1)
+//   }
+
+//   this.factorial = function() {
+//     if (this.n === 'Error') {
+//       return 'Error!';
+//     }
+//     return recursiveFactorial(this.n)
+//   }
+
+//   function recursiveFactorial(num1) {
+//     if (num1 === 0) {
+//       return 1
+//     }
+//     return num1 * recursiveFactorial(num1 - 1)
+//   }
+
+//   this.power = function(m) {
+//     if (this.n === 'Error') {
+//       return 'Error'
+//     }
+//     return recursivePower(this.n,m)
+//   }
+
+//   function recursivePower(base, exponent) {
+//     if (exponent === 0) {
+//       return 1
+//     }
+//     return base * recursivePower(base, exponent - 1)
+//   }
+
+//   this.fibonacci = function () {
+//     if (this.n === 'Error' || this.n < 0) {
+//       return 'Error'
+//     }
+//     return recursiveFibonacci(this.n)
+//   }
+//   function recursiveFibonacci(F) {
+//     if (F === 0) {
+//       return 0
+//     } else if (F === 1) {
+//       return 1
+//     } else {
+//       return recursiveFibonacci(F - 1) + recursiveFibonacci(F - 2)
+//     }
+//   }
+// }
+
+// const handler = new NumberHandler(7)
+// console.log(handler.sumToN())
+// console.log(handler.factorial())
+// console.log(handler.power(3))
+// console.log(handler.fibonacci())
+
+
+// function Counter() {
+//   this.count = 0;
+
+//   this.increment = function() {
+//     this.count = this.count + 1;
+//     return this.count
+//   }
+// }
+
+// const counter = new Counter()
+// console.log(counter.increment())
+// console.log(counter.count)
+
+
+// function sumToN(n) {
+
+//   if (n === 0) {
+//     return 0
+//   } else {
+//     return n + sumToN(n - 1)
+//   }
+// }
+
+
+
+// function factorial(n) {
+//   if (n <= 0) {
+//     return 1
+//   } else {
+//     return n * factorial(n - 1)
+    
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
