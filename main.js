@@ -648,10 +648,33 @@
 
 
 
+let contactBook = {
+  contacts: [
+    {name: 'Alice', phone: '+123456789', email: 'alice@ex.com'},
+    {name: 'Bob', phone: '+987654321', email: 'bob@ex.com'}
+  ],
+
+  findContactByName: function(name) {
+    return this.contacts.find(contactName => contactName.name === name) || 'Контакт не найден'
+  },
+
+  addContact: function(newContact) {
+    if (this.findContactByName(newContact.name) !== 'Контакт не найден') {
+      return 'Контакт с таким именем уже существует';
+    }
+    this.contacts.push(newContact);
+    return 'Контакт добавлен успешно';
+  }
+}
 
 
 
+console.log(contactBook.findContactByName('Alice')); 
+console.log(contactBook.findContactByName('Charlie'));
 
 
+console.log(contactBook.addContact({ name: 'Charlie', phone: '+1122334455', email: 'charlie@example.com' }));
+console.log(contactBook.findContactByName('Charlie'));
 
 
+console.log(contactBook.addContact({ name: 'Alice', phone: '+000000000', email: 'newalice@example.com' }));
