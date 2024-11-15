@@ -649,6 +649,135 @@
 
 
 
+// function calculateTotalPoints(teams) {
+//   let totalPoints = 0
+//   if (Array.isArray(teams)) {
+//     totalPoints = teams.reduce((sum, players) => sum + players.points, 0)
+//   } else {
+//     for (let teamPlayers in teams) {
+//       totalPoints += calculateTotalPoints(teams[teamPlayers])
+//     }
+//   }
+//   return totalPoints
+// }
+
+
+
+
+// let league = {
+//   RealMadrid: [{name: 'Vini JR', points: 10}, {name: 'Mbappe', points: 15}],
+//   Barcelona: [{name: 'Yamal', points: 20}, {name: 'Lewandowski', points: 25}],
+//   AtleticoMadrid: [{name: 'Alvarez', points: 30}]
+// };
+
+
+// console.log(calculateTotalPoints(league))
+
+
+
+
+// function calculateTotalGoals(teams) {
+//   let totalGoals = 0;
+
+//   if (Array.isArray(teams)) {
+//     totalGoals = teams.reduce((sum, players) => sum + players.goals, 0)
+//   } else {
+//     for (let teamGoals in teams) {
+//       totalGoals += calculateTotalGoals(teams[teamGoals])
+//     }
+//   }
+//   return totalGoals
+// }
+
+
+
+// let league = {
+//   RealMadrid: [
+//     { name: 'Vinicius', goals: 12 },
+//     { name: 'Rodrygo', goals: 10 },
+//     { name: 'Mbappe', goals: 20 }
+//   ],
+//   Barcelona: [
+//     { name: 'Lewandowski', goals: 18 },
+//     { name: 'Gavi', goals: 4 }
+//   ],
+//   AlIttihad: [
+//     { name: 'Benzema', goals: 15 },
+//     { name: 'Kante', goals: 2 }
+//   ],
+//   InterMiami: [
+//     { name: 'Messi', goals: 10 },
+//     { name: 'Busquets', goals: 1 }
+//   ]
+// };
+
+// console.log(calculateTotalGoals(league))
+
+
+
+
+
+
+
+// const user = {
+//   name: 'John',
+//   age: 30,
+//   email: "john@example.com",
+//   isAdmin: true,
+//   getInfo: function() {
+//     let isAdminCheck = user.isAdmin ? "yes" : "no";
+    
+//     return `User: ${this.name}, Age: ${this.age}, Email: ${this.email}, Admin: ${isAdminCheck}`;
+//   }
+// }
+
+// console.log(user.getInfo())
+
+// function sumInput() {
+//   let userNumbers = []; 
+
+//   while (true) {
+//     let userPrompt = prompt('Enter a number');
+
+//     if (userPrompt === null || userPrompt === '0' || userPrompt.trim() === '' || isNaN(Number(userPrompt))) {
+//       break; 
+//     }
+
+//     userNumbers.push(Number(userPrompt));
+//   }
+
+//   return userNumbers.reduce((acc, num) => acc + num, 0);
+// }
+
+// let result = sumInput();
+// console.log('Сумма введенных чисел: ' + result);
+
+
+
+
+
+const user = {
+  1: {
+    name: 'Angela',
+    age: 45,
+    location: 'Porto',
+    occupation: 'Law'
+  },
+  2: {
+    name: 'Kate',
+    age: 67,
+    location: 'Amsterdam',
+    occupation: 'Sales'
+  }
+}
+
+const userInfo = Object.values(user)
+const userInfo2 = Object.entries(user)
+
+console.log(userInfo)
+console.log(userInfo2)
+
+
 
 
 
