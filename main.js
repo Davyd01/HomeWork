@@ -651,7 +651,12 @@
 
 
 
+const numbers = [1,2,3,4,5,6,7,true,8,9,10,12,15,789,"string",false,421,745,888,124,485,148]
+const evenNumvers = numbers.filter(function(number) {
+  return number % 2 === 0;
+})
 
+console.log(evenNumvers)
 
 
 
